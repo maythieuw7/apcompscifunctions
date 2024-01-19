@@ -1,27 +1,56 @@
+//write about function here
+//
+//
+//
 function getVowels(input){
-    //makes all the letters in the input lowercase so you dont have an issue with one being uppercase
-    input = input.toLowerCase();
-    //creates a list that will be returned
-    var list = [];
-    //makes a variable that will help determine if ther are no vowels
-    var noVowels = true;
-    //sets up loop to iterate through input
-    for (var i = 0; i < input.length; i++) {
-      //checks to see if the input at index i is equal to a vowel
-      if (input[i] == "a" || input[i] == "e" || input[i] == "i" || input[i] == "o" || input[i] == "u") {
-        //if it goes through it gets added to ths list
-        appendItem(list, input[i]);
-        //if there is a vowel it sets noVowels to false, this will be used later
-        noVowels = false;
-      }
-    } //Creates a conditional to check noVowels, if there are it should be set to false which returns the list
-    if (noVowels == true) {
-      return "No Vowels Found";
-    } else {
-    return list;
+  //makes all the letters in the input lowercase so you dont have an issue with one being uppercase
+  input = input.toLowerCase();
+  //creates a list that will be returned
+  var list = [];
+  //makes a variable that will help determine if ther are no vowels
+  var noVowels = true;
+  //sets up loop to iterate through input
+  for (var i = 0; i < input.length; i++) {
+    //checks to see if the input at index i is equal to a vowel
+    if (input[i] == "a" || input[i] == "e" || input[i] == "i" || input[i] == "o" || input[i] == "u") {
+      //if it goes through it gets added to ths list
+      appendItem(list, input[i]);
+      //if there is a vowel it sets noVowels to false, this will be used later
+      noVowels = false;
+    }
+  } //Creates a conditional to check noVowels, if there are it should be set to false which returns the list
+  if (noVowels == true) {
+    return "No Vowels Found";
+  } else {
+  return list;
+  }
+}
+
+//console.log(getVowels("hello"));
+//console.log(getVowels("test sentence"));
+//console.log(getVowels("Hello World"));
+
+//write about function here
+//
+//
+//
+function getConst(input){
+  input = input.toLowerCase();
+  var list = [];
+  var noConst = true;
+  for (var i = 0; i < input.length; i++) {
+    if (input[i] != "a" && input[i] != "e" && input[i] != "i" && input[i] != "o" && input[i] != "u") {
+      appendItem(list, input[i]);
+      noConst = false;
     }
   }
-  
-  //console.log(getVowels("hello"));
-  //console.log(getVowels("test sentence"));
-  //console.log(getVowels("Hello World"));
+  if (noConst == true) {
+    return "No Vowels Found";
+  } else {
+  return list;
+  }
+}
+
+//console.log(getConst("hello"));
+//console.log(getConst("test sentence"));
+//console.log(getConst("Hello World"));
